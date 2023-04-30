@@ -1,5 +1,5 @@
 const Navbar = () => (
-    <nav className="bg-gray-100 py-12 flex items-center justify-center uppercase tracking-widest text-xs text-gray-500">
+    <nav className="bg-gray-100 py-8 flex items-center justify-center uppercase tracking-widest text-xs text-gray-500">
         <div className="container flex justify-between pl-4">
             <div>
                 <a>SLTA</a>
