@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 const Footer = () => {
     return (
@@ -8,13 +9,21 @@ const Footer = () => {
                 </div>
                 <div>
                     <div className="font-display text-white uppercase text-sm tracking-widest mb-6">More Info</div>
-                    <a className="block mb-4">About</a>
-                    <a className="block mb-4">Contact</a>
+                    <Link href={'/about'}>
+                        <span className="block mb-4">About</span>
+                    </Link>
+                    <Link href={'contact'}>
+                        <span className="block mb-4">Contact</span>
+                    </Link>
                 </div>
                 <div>
                     <div className="font-display text-white uppercase text-sm tracking-widest mb-6">More Links</div>
-                    <a className="block mb-4">Destinations</a>
-                    <a className="block mb-4">Experience</a>
+                    <Link href={'/destinations'}>
+                        <span className="block mb-4">Destinations</span>
+                    </Link>
+                    <Link href={'experience'}>
+                        <span className="block mb-4">Experience</span>
+                    </Link>
                 </div>
                 <div>
                     <div className="font-display text-white uppercase text-sm tracking-widest mb-6">Social Links</div>
