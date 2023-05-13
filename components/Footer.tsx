@@ -1,11 +1,18 @@
 import Link from "next/link"
+import Image from 'next/image'
+import Logo from '../public/_Logo.svg'
 
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
                 <div>
-                    <div className="text-white opacity-50 text-4xl font-display">S L T A</div>
+                    <Image
+                        src={Logo}
+                        width={137}
+                        height={115}
+                        alt="Starlyn Thrilling Adventures"
+                    />
                 </div>
                 <div>
                     <div className="font-display text-white uppercase text-sm tracking-widest mb-6">More Info</div>
