@@ -33,24 +33,26 @@ const HomePage = async () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100">
-                <div className="p-12 md:py-24 h-screen">
-                    <div className="relative h-full w-full">
-                        <Image
-                            src={page.acf.section_3.image}
-                            alt="image"
-                            fill
-                            style={{ objectFit: "contain", objectPosition: "right" }}
-                        />
+            <div className="container mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100">
+                    <div className="p-12 md:py-24 h-screen">
+                        <div className="relative h-full w-full">
+                            <Image
+                                src={page.acf.section_3.image}
+                                alt="image"
+                                fill
+                                style={{ objectFit: "contain", objectPosition: "right" }}
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="p-12 md:p-32 flex justify-start items-center">
-                    <div className="max-w-md">
-                        <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div>
-                        <h2 className="text-2xl md:text-2xl lg:text-3xl mb-8 tracking-widest uppercase">
-                            {page.acf.section_3.our_tours.title}
-                        </h2>
-                        <div className="text-sm text-gray-600 tracking-wide leading-8" dangerouslySetInnerHTML={{ __html: page.acf.section_3.our_tours.content }}></div>
+                    <div className="p-12 md:p-32 flex justify-start items-center">
+                        <div className="max-w-md">
+                            <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div>
+                            <h2 className="text-2xl md:text-2xl lg:text-3xl mb-8 tracking-widest uppercase">
+                                {page.acf.section_3.our_tours.title}
+                            </h2>
+                            <div className="text-sm text-gray-600 tracking-wide leading-8" dangerouslySetInnerHTML={{ __html: page.acf.section_3.our_tours.content }}></div>
+                        </div>
                     </div>
                 </div>
             </div>
