@@ -160,8 +160,8 @@ const Author = (props: any) => {
     const { author } = props
 
     return (
-        <div className="absolute bottom-20 right-0">
-            <p className="text-white">Image by {author}</p>
+        <div className="absolute bottom-10 right-4">
+            <p className="text-white text-sm tracking-tighter opacity-75">Image by {author}</p>
         </div>
     )
 }

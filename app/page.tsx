@@ -34,20 +34,20 @@ const HomePage = async () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100">
-                <div className="p-12 md:p-24 flex justify-end items-center">
+                <div className="p-12 md:py-24 h-screen">
                     <div className="relative h-full w-full">
                         <Image
                             src={page.acf.section_3.image}
                             alt="image"
                             fill
-                            style={{ objectFit: "cover" }}
+                            style={{ objectFit: "contain", objectPosition: "right" }}
                         />
                     </div>
                 </div>
                 <div className="p-12 md:p-32 flex justify-start items-center">
                     <div className="max-w-md">
                         <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-8 tracking-widest">
+                        <h2 className="text-2xl md:text-2xl lg:text-3xl mb-8 tracking-widest uppercase">
                             {page.acf.section_3.our_tours.title}
                         </h2>
                         <div className="text-sm text-gray-600 tracking-wide leading-8" dangerouslySetInnerHTML={{ __html: page.acf.section_3.our_tours.content }}></div>
@@ -56,7 +56,7 @@ const HomePage = async () => {
             </div>
             <div className="px-4 mx-auto text-center py-24 md:py-32">
                 <div className="w-10 h-0.5 bg-yellow-800 mb-4 mx-auto"></div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl mb-8 tracking-widest">
+                <h2 className="text-2xl md:text-2xl lg:text-3xl mb-8 tracking-widest uppercase">
                     {page.acf.section_4.title}
                 </h2>
                 <div
@@ -74,7 +74,7 @@ const HomePage = async () => {
                 <div className="bg-gray-100 p-12 md:p-24 flex justify-start items-center">
                     <div className="max-w-md">
                         <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-8 tracking-widest">
+                        <h2 className="text-xl md:text-xl lg:text-2xl mb-8 tracking-widest uppercase">
                             {page.acf.section_5.mission_and_values.title}
                         </h2>
                         <div
