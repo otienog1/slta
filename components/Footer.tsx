@@ -45,4 +45,4 @@ const Footer = () => {
     )
 }
 
-export default <Footercls></Footercls>
+export default Footer
