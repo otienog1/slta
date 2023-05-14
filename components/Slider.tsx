@@ -102,18 +102,18 @@ const Slider = (props: any) => {
 
     }
 
-    const clickEvent = (e) => {
-        bullet('.list__item').forEach((bullet, i) => {
-            bullet.addEventListener('click', () => {
-                direction = "next"
-                stopAutoplay()
-                next = i
-                tweenSlide()
-                current = i
-                startAutoplay()
-            })
-        })
-    }
+    // const clickEvent = (e) => {
+    //     bullet('.list__item').forEach((bullet, i) => {
+    //         bullet.addEventListener('click', () => {
+    //             direction = "next"
+    //             stopAutoplay()
+    //             next = i
+    //             tweenSlide()
+    //             current = i
+    //             startAutoplay()
+    //         })
+    //     })
+    // }
 
     useEffect(() => {
         initSlide()

@@ -10,13 +10,14 @@ const Navbar = () => (
     <nav className="bg-gray-100 flex items-center justify-center" >
         <div className="container flex justify-between pl-4">
             <div className="flex flex-col justify-center">
-                <Link href={'/'}>
+                <Link href={'/'} className="flex items-center">
                     <Image
                         src={Logo}
                         width={137 / 2}
                         height={115 / 2}
                         alt="Starlyn Thrilling Adventures"
                     />
+                    <span className="ml-4 uppercase font-semibold text-sm text-gray-600 tracking-widest">Starlyn Thrilling Adventures</span>
                 </Link>
             </div>
             <div className="py-8 flex items-center uppercase tracking-widest text-xs text-gray-500">
