@@ -29,7 +29,6 @@ const HomePage = async () => {
                             }
                         }
                     >
-
                     </div>
                 </div>
             </div>
@@ -41,7 +40,10 @@ const HomePage = async () => {
                                 src={page.acf.section_3.image}
                                 alt="image"
                                 fill
-                                style={{ objectFit: "contain", objectPosition: "right" }}
+                                style={{
+                                    objectFit: "contain",
+                                    objectPosition: "right"
+                                }}
                             />
                         </div>
                     </div>
