@@ -32,7 +32,6 @@ const HomePage = async () => {
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
             <div className="bg-gray-100">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2">
@@ -45,21 +44,6 @@ const HomePage = async () => {
                                     style={{ objectFit: "contain", objectPosition: "right" }}
                                 />
                             </div>
-=======
-            <div className="container mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100">
-                    <div className="p-12 md:py-24 h-screen">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={page.acf.section_3.image}
-                                alt="image"
-                                fill
-                                style={{
-                                    objectFit: "contain",
-                                    objectPosition: "right"
-                                }}
-                            />
->>>>>>> 38c77566df4381711f53f87f6e86a37714faf5d0
                         </div>
                         <div className="p-12 md:p-32 flex justify-end items-center">
                             <div className="max-w-md">
