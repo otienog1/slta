@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+.navbar {
+  background-color: rgba(27, 118, 50, 1);
+}

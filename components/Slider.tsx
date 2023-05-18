@@ -8,7 +8,7 @@ const Slider = (props: any) => {
     let { slides, autoplay, direction, speed, duration, current } = props,
         next = current + 1
 
-    const sliders = useRef(null),
+    const sliders = useRef<HTMLInputElement>(null),
         slider = gsap.utils.selector(sliders)
 
     const initSlide = () => {

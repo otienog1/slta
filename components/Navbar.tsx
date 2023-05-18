@@ -7,7 +7,8 @@ import Logo from '../public/_Logo.svg'
 const Navbar = () => (
 
 
-    <nav className="bg-gray-100 flex items-center justify-center" >
+    <nav className="navbar flex items-center justify-center" >
+        {/* <div className="w-full flex"></div> */}
         <div className="container flex justify-between pl-4">
             <div className="flex flex-col justify-center">
                 <Link href={'/'} className="flex items-center">
@@ -17,10 +18,10 @@ const Navbar = () => (
                         height={115 / 2}
                         alt="Starlyn Thrilling Adventures"
                     />
-                    <span className="ml-4 uppercase font-semibold text-sm text-gray-600 tracking-widest">Starlyn Thrilling Adventures</span>
+                    <span className="ml-4 uppercase font-semibold text-sm text-slate-50 tracking-widest">Starlyn Thrilling Adventures</span>
                 </Link>
             </div>
-            <div className="py-8 flex items-center uppercase tracking-widest text-xs text-gray-500">
+            <div className="py-8 flex items-center uppercase tracking-widest text-xs text-slate-50">
                 <Link href={'/'}>
                     <span className="mx-4">Home</span>
                 </Link>

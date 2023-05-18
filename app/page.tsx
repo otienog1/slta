@@ -32,7 +32,7 @@ const HomePage = async () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-100">
+            <div className="" style={{ backgroundColor: 'rgba(27, 118, 50, .1)' }}>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-12 md:py-24 h-screen">
@@ -47,11 +47,16 @@ const HomePage = async () => {
                         </div>
                         <div className="p-12 md:p-32 flex justify-end items-center">
                             <div className="max-w-md">
-                                <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div>
-                                <h2 className="text-2xl lg:text-2xl mb-8 tracking-widest uppercase">
+                                {/* <div className="w-10 h-0.5 bg-yellow-800 mb-4"></div> */}
+                                <h2 className="text-4xl mb-8 tracking-widest">
                                     {page.acf.section_3.our_tours.title}
                                 </h2>
-                                <div className="text-sm text-gray-600 tracking-wide leading-8" dangerouslySetInnerHTML={{ __html: page.acf.section_3.our_tours.content }}></div>
+                                <div
+                                    className="tracking-wide leading-8 child:mb-6"
+                                    dangerouslySetInnerHTML={
+                                        { __html: page.acf.section_3.our_tours.content }
+                                    }>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -90,6 +95,9 @@ const HomePage = async () => {
                     </div>
                 </div>
                 <div className="bg-white p-12 md:p-24 flex justify-end items-center">123</div>
+            </div>
+            <div>
+                Contact
             </div>
         </main>
     )
