@@ -1,3 +1,5 @@
+'use client'
+
 import Slider from "@/components/Slider";
 import { getPage } from "@/components/page";
 import Image from "next/image";

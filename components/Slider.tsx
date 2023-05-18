@@ -8,12 +8,12 @@ const Slider = (props: any) => {
     let { slides, autoplay, direction, speed, duration, current } = props,
         next = current + 1
 
-    const sliders = useRef<HTMLInputElement>(null),
+    const sliders = useRef<any>(null),
         slider = gsap.utils.selector(sliders)
 
     const initSlide = () => {
-        slider('.slide').forEach(slider => {
-            slider.style.zIndex = '1'
+        slider('.slide').forEach((slider: any) => {
+            slider.style.zIndex = 1
         })
         if (sliders.current != null) {
             sliders.current.children[next].style.zIndex = 2
@@ -76,12 +76,13 @@ const Slider = (props: any) => {
 
         // bullet('.list__item')[next].classList.add("is__active")
 
-        slider('.slide').forEach(slider => {
+        slider('.slide').forEach((slider: any) => {
             slider.style.zIndex = 1
         });
         if (sliders.current != null) {
             sliders.current!.children[next].style.zIndex = 3
             sliders.current!.children[current].style.zIndex = 2
+
         }
         // textWrappers('.slideText').forEach(tt => {
         //     tt.style.opacity = 0
