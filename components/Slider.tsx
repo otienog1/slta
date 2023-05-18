@@ -15,12 +15,13 @@ const Slider = (props: any) => {
         slider('.slide').forEach(slider => {
             slider.style.zIndex = '1'
         })
+        if (sliders.current != null) {
+            sliders.current.children[next].style.zIndex = 2
+            sliders.current.children[current].style.zIndex = 3
+            sliders.current.children[current].style.opacity = 1
 
-        sliders.current.children[next].style.zIndex = 2
-        sliders.current.children[current].style.zIndex = 3
-        sliders.current.children[current].style.opacity = 1
-
-        startAutoplay()
+            startAutoplay()
+        }
     }
 
     const startAutoplay = () => {
@@ -39,19 +40,20 @@ const Slider = (props: any) => {
     }
 
     const tweenSlide = () => {
-        setSlide()
-        gsap.to(sliders.current.children[current], {
-            duration: speed,
-            opacity: 0,
-            ease: 'power3.inOut'
-        })
+        if (sliders.current != null) {
+            setSlide()
+            gsap.to(sliders.current.children[current], {
+                duration: speed,
+                opacity: 0,
+                ease: 'power3.inOut'
+            })
 
-        gsap.to(sliders.current.children[next], {
-            duration: speed,
-            opacity: 1,
-            ease: 'power3.inOut'
-        })
-
+            gsap.to(sliders.current.children[next], {
+                duration: speed,
+                opacity: 1,
+                ease: 'power3.inOut'
+            })
+        }
         // gsap.to(textWrapper.current.children[current], {
         //     duration: 2,
         //     opacity: 0,
@@ -77,10 +79,10 @@ const Slider = (props: any) => {
         slider('.slide').forEach(slider => {
             slider.style.zIndex = 1
         });
-
-        sliders.current.children[next].style.zIndex = 3
-        sliders.current.children[current].style.zIndex = 2
-
+        if (sliders.current != null) {
+            sliders.current!.children[next].style.zIndex = 3
+            sliders.current!.children[current].style.zIndex = 2
+        }
         // textWrappers('.slideText').forEach(tt => {
         //     tt.style.opacity = 0
         // });
@@ -94,8 +96,10 @@ const Slider = (props: any) => {
     }
 
     const nextSlide = () => {
-        current === sliders.current.children.length - 1 ? current = 0 : current = next
-        next === sliders.current.children.length - 1 ? next = 0 : next = current + 1
+        if (sliders.current != null) {
+            current === sliders.current.children.length - 1 ? current = 0 : current = next
+            next === sliders.current.children.length - 1 ? next = 0 : next = current + 1
+        }
     }
 
     const prevSlide = () => {
