@@ -11,7 +11,7 @@ const AboutPage = async () => {
             <div className="text-center py-12 px-6 mt-12">
                 <div className="container mx-auto">
                     <h1 className="font-display font-bold text-5xl mb-6 uppercase">{page.acf.title}</h1>
-                    <div className="flex">
+                    <div className="flex w-full h-96">
                         {page.acf.images.map(
                             (image: any, i: any) => (
                                 <div className="w-full h-auto relative" key={i}>
@@ -30,25 +30,25 @@ const AboutPage = async () => {
             </div>
             <div className="text-center py-12 px-6 mt-12">
                 <div className="container mx-auto">
-                    <h1 className="font-display text-base font-extrabold mb-6">{page.acf.our_story.title}</h1>
+                    <h1 className="font-display text-base font-extrabold mb-6 uppercase">{page.acf.our_story.title}</h1>
                     <div className="w-full md:w-1/2 mx-auto" dangerouslySetInnerHTML={{ __html: page.acf.our_story.content }}></div>
                 </div>
             </div>
             <div className="text-center py-12 px-6 mt-12">
                 <div className="container mx-auto">
-                    <h1 className="font-display text-base font-extrabold mb-6">{page.acf.our_values.title}</h1>
+                    <h1 className="font-display text-base font-extrabold mb-6 uppercase">{page.acf.our_values.title}</h1>
                     <div className="w-full md:w-1/2 mx-auto" dangerouslySetInnerHTML={{ __html: page.acf.our_values.content }}></div>
                 </div>
             </div>
             <div className="text-center py-12 px-6 mt-12">
                 <div className="container mx-auto">
-                    <h1 className="font-display text-base font-extrabold mb-6">{page.acf.our_mission.title}</h1>
+                    <h1 className="font-display text-base font-extrabold mb-6 uppercase">{page.acf.our_mission.title}</h1>
                     <div className="w-full md:w-1/2 mx-auto" dangerouslySetInnerHTML={{ __html: page.acf.our_mission.content }}></div>
                 </div>
             </div>
             <div className="text-center py-12 px-6 mt-12">
                 <div className="container mx-auto">
-                    <h1 className="font-display text-base font-extrabold mb-6">{page.acf.our_services.title}</h1>
+                    <h1 className="font-display text-base font-extrabold mb-6 uppercase">{page.acf.our_services.title}</h1>
                     <div className="w-full md:w-1/2 mx-auto" dangerouslySetInnerHTML={{ __html: page.acf.our_services.content }}></div>
                 </div>
             </div>
