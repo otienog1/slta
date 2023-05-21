@@ -15,13 +15,11 @@ const Slider = (props: any) => {
         slider('.slide').forEach((slider: any) => {
             slider.style.zIndex = 1
         })
-        if (sliders.current != null) {
-            sliders.current.children[next].style.zIndex = 2
-            sliders.current.children[current].style.zIndex = 3
-            sliders.current.children[current].style.opacity = 1
+        sliders.current.children[next].style.zIndex = 2
+        sliders.current.children[current].style.zIndex = 3
+        sliders.current.children[current].style.opacity = 1
 
-            startAutoplay()
-        }
+        startAutoplay()
     }
 
     const startAutoplay = () => {
@@ -79,11 +77,9 @@ const Slider = (props: any) => {
         slider('.slide').forEach((slider: any) => {
             slider.style.zIndex = 1
         });
-        if (sliders.current != null) {
-            sliders.current!.children[next].style.zIndex = 3
-            sliders.current!.children[current].style.zIndex = 2
+        sliders.current!.children[next].style.zIndex = 3
+        sliders.current!.children[current].style.zIndex = 2
 
-        }
         // textWrappers('.slideText').forEach(tt => {
         //     tt.style.opacity = 0
         // });
@@ -97,10 +93,8 @@ const Slider = (props: any) => {
     }
 
     const nextSlide = () => {
-        if (sliders.current != null) {
-            current === sliders.current.children.length - 1 ? current = 0 : current = next
-            next === sliders.current.children.length - 1 ? next = 0 : next = current + 1
-        }
+        current === sliders.current.children.length - 1 ? current = 0 : current = next
+        next === sliders.current.children.length - 1 ? next = 0 : next = current + 1
     }
 
     const prevSlide = () => {
@@ -122,12 +116,12 @@ const Slider = (props: any) => {
 
     useEffect(() => {
         initSlide()
-    }, [])
+    }, [initSlide])
 
     return (
         <div ref={sliders} className="w-full h-full relative overflow-hidden">
             {
-                slides.map((slide: any, i: any) => {
+                Array.from(slides).map((slide: any, i: any) => {
                     return (
                         <Slide
                             source={slide.image}
@@ -140,7 +134,6 @@ const Slider = (props: any) => {
         </div>
     )
 }
-
 
 const Slide = (props: any) => {
     let { source, author } = props
