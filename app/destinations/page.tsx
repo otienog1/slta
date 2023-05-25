@@ -12,14 +12,16 @@ const Destinations = async () => {
             </div>
             <div className="container mx-auto flex gap-4 flex-wrap justify-center pb-12 px-6 mb-12">
                 {Array.from(page.acf.destinations).map(({ destination }: any, i: any) => (
-                    <div className="w-1/4 h-96 relative" key={i}>
-                        <Image
-                            src={destination.image}
-                            alt="starlyn thrilling adventures"
-                            fill
-                            style={{ objectFit: "cover" }}
-                        />
-                        <p className="absolute top-1/2 text-center text-white text-3xl font-bold w-full uppercase -translate-y-1/2">
+                    <div className="w-1/5" key={i}>
+                        <div className="h-72 relative">
+                            <Image
+                                src={destination.image}
+                                alt="starlyn thrilling adventures"
+                                fill
+                                style={{ objectFit: "cover" }}
+                            />
+                        </div>
+                        <p className="text-center text-base font-bold w-full my-4">
                             {destination.name}
                         </p>
                     </div>
