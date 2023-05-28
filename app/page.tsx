@@ -10,7 +10,7 @@ const HomePage = async () => {
 
     return (
         <main className="min-h-screen justify-center">
-            <div className="h-[calc(100vh-280px)]">
+            <div className="h-[calc(100vh-280px)] lg:h-[calc(100vh-280px)]">
                 <Slider
                     slides={page.acf.section_1.slider}
                     autoplay={!0}
