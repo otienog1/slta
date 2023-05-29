@@ -20,9 +20,9 @@ export default function RootLayout({
       <body suppressHydrationWarning={true}>
         <>
           <Navbar />
-          <div>
+          <>
             {children}
-          </div>
+          </>
           <Footer />
         </>
       </body>
