@@ -3,6 +3,7 @@
 import Slider from "@/components/Slider";
 import { getPage } from "@/components/page";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = async () => {
 
@@ -10,7 +11,7 @@ const HomePage = async () => {
 
     return (
         <main className="min-h-screen justify-center">
-            <div className="h-[calc(100vh-280px)] lg:h-[calc(100vh-280px)]">
+            <div className="h-[calc(100vh-80px)] lg:h-[calc(100vh-240px)]">
                 <Slider
                     slides={page.acf.section_1.slider}
                     autoplay={!0}
@@ -149,20 +150,21 @@ const HomePage = async () => {
                 <div className="bg-white p-12 md:p-24 flex justify-end items-center">123</div>
             </div> */}
             <div>
-                {/* <div className="py-24 lg:py-28 overflow-hidden" style="background: url('basko-assets/images/gradient.png'); background-repeat: no-repeat; background-size: cover;"> */}
-                <div className="py-24 lg:py-28 overflow-hidden">
+                <div className="py-24 lg:py-28 overflow-hidden" style={{ background: `url(${page.acf.section_7.image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                     <div className="container px-4 mx-auto">
                         <div className="max-w-xl mx-auto text-center">
-                            <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter" data-config-id="auto-txt-1-6">Take your personal financing to the next level</h2>
-                            <p className="mb-8 text-xl text-gray-200 tracking-tight" data-config-id="auto-txt-2-6">Whereby is the super simple way to connect over video. No apps, downloads, or long meeting links.</p>
-                            <a className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200" href="#" data-config-id="auto-txt-3-6">
-                                Get in touch
-                            </a>
+                            <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize" data-config-id="auto-txt-1-6">Book your adventure today!</h2>
+                            <p className="mb-8 text-xl text-gray-200 tracking-tight" data-config-id="auto-txt-2-6">Customize your experience with our tailored itineraries and enjoy the expertise of our professional guides.</p>
+                            <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200" href="#" data-config-id="auto-txt-3-6">
+                                <Link href={'/about'}>
+                                    {page.acf.section_7.title}
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     )
 }
 
