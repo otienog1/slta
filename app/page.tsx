@@ -154,7 +154,7 @@ const HomePage = async () => {
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize">Book your adventure today!</h2>
                         <p className="mb-8 text-xl text-gray-200 tracking-tight">Customize your experience with our tailored itineraries and enjoy the expertise of our professional guides.</p>
-                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200" href="#">
+                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200">
                             <Link href={'/contact'}>
                                 {page.acf.section_7.title}
                             </Link>
