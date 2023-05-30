@@ -79,9 +79,9 @@ const HomePage = async () => {
                                 <div className="mb-6 overflow-hidden rounded-lg">
                                     {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Finance</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">10 tips for managing your money in the new year</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Best of Kenya Safari</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">7 days</span>
                             </div >
                         </div >
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
@@ -89,9 +89,9 @@ const HomePage = async () => {
                                 <div className="mb-6 overflow-hidden rounded-lg">
                                     {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog2.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Budget</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">The benefits of creating a budget and how to get started</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Highlights of Kenya</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">7 days</span>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
@@ -99,9 +99,9 @@ const HomePage = async () => {
                                 <div className="mb-6 overflow-hidden rounded-lg">
                                     {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Management</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Why you should consider investing in the stock market</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Big Five Safari</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">5 days</span>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
@@ -109,9 +109,9 @@ const HomePage = async () => {
                                 <div className="mb-6 overflow-hidden rounded-lg">
                                     {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Management</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Why you should consider investing in the stock market</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Tanzania</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Best of Tanzania</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">6 days</span>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ const HomePage = async () => {
                 </div>
                 <div className="bg-white p-12 md:p-24 flex justify-end items-center">123</div>
             </div> */}
-            <div className="container mx-auto py-24 lg:py-28 overflow-hidden" style={{ background: `url(${page.acf.section_7.image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+            <div className="py-24 lg:py-28 overflow-hidden" style={{ background: `url(${page.acf.section_7.image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                 <div className="container px-4 mx-auto">
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize">Book your adventure today!</h2>
