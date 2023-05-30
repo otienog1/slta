@@ -68,50 +68,50 @@ const HomePage = async () => {
             <div className="md:py-28">
                 <div className="container mx-auto">
                     <div className="max-w-2xl text-center mx-auto mb-16">
-                        <h2 className="font-heading mb-5 text-6xl tracking-tighter" data-config-id="auto-txt-1-3">
+                        <h2 className="font-heading mb-5 text-6xl tracking-tighter">
                             {page.acf.section_3.our_tours.title}
                         </h2>
-                        <p className="text-xl tracking-tight" data-config-id="auto-txt-2-3">Use and re-use tons of responsive sections to create the perfect layout. Sections are organised into convenient categories.</p>
+                        <p className="text-xl tracking-tight">Use and re-use tons of responsive sections to create the perfect layout. Sections are organised into convenient categories.</p>
                     </div>
                     <div className="flex flex-wrap px-4">
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
                             <div className="group cursor-pointer">
                                 <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog.jpg" alt="" data-config-id="auto-img-1-3" /> */}
+                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight" data-config-id="auto-txt-3-3">Finance</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline" data-config-id="auto-txt-4-3">10 tips for managing your money in the new year</h3>
-                                <span className="text-sm text-gray-600 tracking-tight" data-config-id="auto-txt-5-3">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Finance</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">10 tips for managing your money in the new year</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
                             </div >
                         </div >
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
                             <div className="group cursor-pointer">
                                 <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog2.jpg" alt="" data-config-id="auto-img-2-3" /> */}
+                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog2.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight" data-config-id="auto-txt-6-3">Budget</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline" data-config-id="auto-txt-7-3">The benefits of creating a budget and how to get started</h3>
-                                <span className="text-sm text-gray-600 tracking-tight" data-config-id="auto-txt-8-3">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Budget</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">The benefits of creating a budget and how to get started</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
                             <div className="group cursor-pointer">
                                 <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" data-config-id="auto-img-3-3" /> */}
+                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight" data-config-id="auto-txt-9-3">Management</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline" data-config-id="auto-txt-10-3">Why you should consider investing in the stock market</h3>
-                                <span className="text-sm text-gray-600 tracking-tight" data-config-id="auto-txt-11-3">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Management</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Why you should consider investing in the stock market</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4 p-9">
                             <div className="group cursor-pointer">
                                 <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" data-config-id="auto-img-3-3" /> */}
+                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight" data-config-id="auto-txt-9-3">Management</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline" data-config-id="auto-txt-10-3">Why you should consider investing in the stock market</h3>
-                                <span className="text-sm text-gray-600 tracking-tight" data-config-id="auto-txt-11-3">August 28, 2022</span>
+                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Management</p>
+                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Why you should consider investing in the stock market</h3>
+                                <span className="text-sm text-gray-600 tracking-tight">August 28, 2022</span>
                             </div>
                         </div>
                     </div>
@@ -152,9 +152,9 @@ const HomePage = async () => {
             <div className="container mx-auto py-24 lg:py-28 overflow-hidden" style={{ background: `url(${page.acf.section_7.image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                 <div className="container px-4 mx-auto">
                     <div className="max-w-xl mx-auto text-center">
-                        <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize" data-config-id="auto-txt-1-6">Book your adventure today!</h2>
-                        <p className="mb-8 text-xl text-gray-200 tracking-tight" data-config-id="auto-txt-2-6">Customize your experience with our tailored itineraries and enjoy the expertise of our professional guides.</p>
-                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200" href="#" data-config-id="auto-txt-3-6">
+                        <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize">Book your adventure today!</h2>
+                        <p className="mb-8 text-xl text-gray-200 tracking-tight">Customize your experience with our tailored itineraries and enjoy the expertise of our professional guides.</p>
+                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200" href="#">
                             <Link href={'/contact'}>
                                 {page.acf.section_7.title}
                             </Link>
