@@ -1,5 +1,3 @@
-'use client'
-
 import { getPage } from "@/components/page"
 import Image from "next/image"
 
@@ -12,7 +10,7 @@ const AboutPage = async () => {
                 <div className="container mx-auto pl-6">
                     <h1 className="font-display font-bold text-5xl mb-20 uppercase">{page.acf.title}</h1>
                     <div className="flex justify-center w-full gap-4 mb-20">
-                        {Array.from(page.acf.images).map(
+                        {page.acf.images?.map(
                             (image: any, i: any) => (
                                 <div className={`w-1/3 h-[calc(50vh)] relative overflow-hidden`} key={i}>
                                     <Image
