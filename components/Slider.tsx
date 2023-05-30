@@ -1,72 +1,18 @@
 'use client'
 
 import Image from "next/image"
-import { useEffect, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 
 const Slider = (props: any) => {
     let { slides, autoplay, direction, speed, duration, current } = props,
-        next = current + 1
+        next = useRef<any>(current + 1),
+        _current = useRef<any>(current)
 
     const sliders = useRef<any>(null),
         slider = gsap.utils.selector(sliders)
 
-    const initSlide = () => {
-        slider('.slide').forEach((slider: any) => {
-            slider.style.zIndex = 1
-        })
-        sliders.current.children[next].style.zIndex = 2
-        sliders.current.children[current].style.zIndex = 3
-        sliders.current.children[current].style.opacity = 1
-
-        startAutoplay()
-    }
-
-    const startAutoplay = () => {
-        autoplay = !0
-        !0 === autoplay && gsap.delayedCall(duration, play)
-    }
-
-    const stopAutoplay = () => {
-        autoplay = !1
-        gsap.killTweensOf(play)
-    }
-
-    const play = () => {
-        tweenSlide()
-        !0 === autoplay && gsap.delayedCall(duration, play)
-    }
-
-    const tweenSlide = () => {
-        if (sliders.current != null) {
-            setSlide()
-            gsap.to(sliders.current.children[current], {
-                duration: speed,
-                opacity: 0,
-                ease: 'power3.inOut'
-            })
-
-            gsap.to(sliders.current.children[next], {
-                duration: speed,
-                opacity: 1,
-                ease: 'power3.inOut'
-            })
-        }
-        // gsap.to(textWrapper.current.children[current], {
-        //     duration: 2,
-        //     opacity: 0,
-        //     ease: 'power3.inOut'
-        // })
-
-        // gsap.to(textWrapper.current.children[next], {
-        //     duration: 2,
-        //     opacity: 1,
-        //     ease: 'power3.inOut'
-        // })
-        getSlide()
-    }
-
-    const setSlide = () => {
+    const setSlide = useCallback(() => {
 
         // bullet('.list__item').forEach(bullet => {
         //     bullet.classList.remove("is__active")
@@ -77,8 +23,9 @@ const Slider = (props: any) => {
         slider('.slide').forEach((slider: any) => {
             slider.style.zIndex = 1
         });
-        sliders.current!.children[next].style.zIndex = 3
-        sliders.current!.children[current].style.zIndex = 2
+
+        sliders.current.children[next.current].style.zIndex = 3
+        sliders.current.children[_current.current].style.zIndex = 2
 
         // textWrappers('.slideText').forEach(tt => {
         //     tt.style.opacity = 0
@@ -86,19 +33,75 @@ const Slider = (props: any) => {
 
         // textWrapper.current.children[next].style.opacity = 0
         // textWrapper.current.children[current].style.opacity = 1
-    }
+    }, [_current, next, slider])
 
-    const getSlide = () => {
+    const nextSlide = useCallback(() => {
+        _current.current === sliders.current.children.length - 1 ? _current.current = 0 : _current.current = next.current
+        next.current === sliders.current.children.length - 1 ? next.current = 0 : next.current = _current.current + 1
+    }, [])
+
+    const getSlide = useCallback(() => {
         "next" === direction ? nextSlide() : prevSlide()
-    }
+    }, [direction, nextSlide])
 
-    const nextSlide = () => {
-        current === sliders.current.children.length - 1 ? current = 0 : current = next
-        next === sliders.current.children.length - 1 ? next = 0 : next = current + 1
-    }
 
     const prevSlide = () => {
 
+    }
+
+    const tweenSlide = useCallback(() => {
+        if (sliders.current != null) {
+            setSlide()
+            gsap.to(sliders.current.children[_current.current], {
+                duration: speed,
+                opacity: 0,
+                ease: 'power3.inOut'
+            })
+
+            gsap.to(sliders.current.children[next.current], {
+                duration: speed,
+                opacity: 1,
+                ease: 'power3.inOut'
+            })
+
+            // gsap.to(textWrapper.current.children[current], {
+            //     duration: 2,
+            //     opacity: 0,
+            //     ease: 'power3.inOut'
+            // })
+
+            // gsap.to(textWrapper.current.children[next], {
+            //     duration: 2,
+            //     opacity: 1,
+            //     ease: 'power3.inOut'
+            // })
+            getSlide()
+        }
+    }, [_current, getSlide, setSlide, next, speed])
+
+    const play = useCallback(() => {
+        tweenSlide()
+        !0 === autoplay && gsap.delayedCall(duration, play)
+    }, [autoplay, duration, tweenSlide])
+
+    const startAutoplay = useCallback(() => {
+        !0 === autoplay && gsap.delayedCall(duration, play)
+    }, [autoplay, duration, play])
+
+    const initSlide = useCallback(() => {
+        slider('.slide').forEach((slider: any) => {
+            slider.style.zIndex = 1
+        })
+        sliders.current.children[next.current].style.zIndex = 2
+        sliders.current.children[_current.current].style.zIndex = 3
+        sliders.current.children[_current.current].style.opacity = 1
+
+        startAutoplay()
+    }, [_current, next, slider, startAutoplay])
+
+    const stopAutoplay = () => {
+        autoplay = !1
+        gsap.killTweensOf(play)
     }
 
     // const clickEvent = (e) => {
@@ -114,9 +117,7 @@ const Slider = (props: any) => {
     //     })
     // }
 
-    useEffect(() => {
-        initSlide()
-    }, [initSlide])
+    useEffect(() => { initSlide() }, [initSlide])
 
     return (
         <div ref={sliders} className="w-full h-full relative overflow-hidden">
