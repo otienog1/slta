@@ -5,7 +5,7 @@ import Logo from '../public/_Logo.svg'
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
+            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left pt-16 pb-10">
                 <div>
                     <Image
                         src={Logo}
@@ -34,11 +34,11 @@ const Footer = () => {
                 </div>
                 <div>
                     <div className="font-display text-white uppercase text-sm tracking-widest mb-6">Social Links</div>
-                    <a className="block mb-4">Instagram</a>
-                    <a className="block mb-4">Facebook</a>
+                    <Link href={'https://www.instagram.com/starlynadventures/'} className="block mb-4" target="_blank" rel="external" referrerPolicy="no-referrer">Instagram</Link>
+                    <Link href={'https://www.facebook.com/starlynadventures/'} className="block mb-4" target="_blank" rel="external" referrerPolicy="no-referrer">Facebook</Link>
                 </div>
             </div>
-            <div className="text-sm text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24">
+            <div className="text-sm text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-4">
                 &copy; Designed by <span className="lowercase">7plus8_</span>
             </div>
         </footer>

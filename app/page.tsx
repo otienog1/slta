@@ -75,11 +75,11 @@ const HomePage = async () => {
                     </div>
                     <div className="flex flex-wrap px-4">
                         {page.acf.section_3.tours.map((tour: any, i: any) => (
-                            <div className="w-full md:w-1/2 lg:w-1/4 p-9" key={i}>
+                            <div className="w-full md:w-1/2 lg:w-1/4 p-4" key={i}>
                                 <div className="group cursor-pointer">
-                                    <div className="mb-4 overflow-hidden h-52 relative">
+                                    <div className="mb-4 rounded overflow-hidden h-52 relative">
                                         <Image
-                                            className="w-full transform hover:scale-105 transition duration-500"
+                                            className="w-full rounded transform hover:scale-105 transition duration-500"
                                             src={tour.image}
                                             alt={tour.title}
                                             fill
