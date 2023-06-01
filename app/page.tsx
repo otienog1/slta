@@ -11,7 +11,7 @@ const HomePage = async () => {
 
     return (
         <main className="min-h-screen justify-center">
-            <div className="md:h-[calc(100vh-80px)] 2xl:h-[calc(100vh-240px)]">
+            <div className="md:h-[calc(100vh-80px)] xl:h-[calc(100vh-140px)]">
                 <Slider
                     slides={page.acf.section_1.slider}
                     autoplay={!0}
@@ -38,7 +38,7 @@ const HomePage = async () => {
             <div className="" style={{ backgroundColor: 'rgba(27, 118, 50, .1)' }}>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2">
-                        <div className="p-12 md:py-24 h-screen 2xl:h-[calc(100vh-300px)]">
+                        <div className="p-12 md:py-24 h-screen 2xl:h-[calc(100vh-100px)]">
                             <div className="relative h-full w-full">
                                 <Image
                                     src={page.acf.section_3.image}
@@ -74,46 +74,24 @@ const HomePage = async () => {
                         <p className="text-xl tracking-tight">Use and re-use tons of responsive sections to create the perfect layout. Sections are organised into convenient categories.</p>
                     </div>
                     <div className="flex flex-wrap px-4">
-                        <div className="w-full md:w-1/2 lg:w-1/4 p-9">
-                            <div className="group cursor-pointer">
-                                <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog.jpg" alt="" /> */}
+                        {page.acf.section_3.tours.map((tour: any, i: any) => (
+                            <div className="w-full md:w-1/2 lg:w-1/4 p-9" key={i}>
+                                <div className="group cursor-pointer">
+                                    <div className="mb-4 overflow-hidden h-52 relative">
+                                        <Image
+                                            className="w-full transform hover:scale-105 transition duration-500"
+                                            src={tour.image}
+                                            alt={tour.title}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                    <p className="text-indigo-500 font-semibold tracking-tight">{tour.destination}</p>
+                                    <h3 className="text-xl group-hover:text-gray-900 font-semibold group-hover:underline">{tour.title}</h3>
+                                    <span className="text-sm text-gray-600 tracking-tight">{tour.days}</span>
                                 </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Best of Kenya Safari</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">7 days</span>
-                            </div >
-                        </div >
-                        <div className="w-full md:w-1/2 lg:w-1/4 p-9">
-                            <div className="group cursor-pointer">
-                                <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog2.jpg" alt="" /> */}
-                                </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Highlights of Kenya</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">7 days</span>
                             </div>
-                        </div>
-                        <div className="w-full md:w-1/2 lg:w-1/4 p-9">
-                            <div className="group cursor-pointer">
-                                <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
-                                </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Kenya</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Big Five Safari</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">5 days</span>
-                            </div>
-                        </div>
-                        <div className="w-full md:w-1/2 lg:w-1/4 p-9">
-                            <div className="group cursor-pointer">
-                                <div className="mb-6 overflow-hidden rounded-lg">
-                                    {/* <Image className="w-full rounded-lg transform hover:scale-105 transition duration-500" src="basko-assets/images/blog/blog3.jpg" alt="" /> */}
-                                </div>
-                                <p className="mb-3 text-indigo-500 font-semibold tracking-tight">Tanzania</p>
-                                <h3 className="mb-4 text-xl group-hover:text-gray-900 font-semibold group-hover:underline">Best of Tanzania</h3>
-                                <span className="text-sm text-gray-600 tracking-tight">6 days</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
