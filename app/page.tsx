@@ -95,12 +95,12 @@ const HomePage = async () => {
                     </div>
                 </div>
             </div>
-            <div className="container px-4 mx-auto text-center py-24 md:py-32" >
+            <div className="container px-4 mx-auto text-center pb-24 md:pb-32" >
                 <h2 className="font-heading mb-5 text-6xl tracking-tighter">
                     {page.acf.section_4.title}
                 </h2>
                 <div
-                    className="px-8 text-xl tracking-tight"
+                    className="mx-auto w-full lg:w-2/3 text-xl tracking-wide leading-relaxed"
                     dangerouslySetInnerHTML={
                         {
                             __html: page.acf.section_4.additional_services
@@ -132,7 +132,7 @@ const HomePage = async () => {
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="font-heading mb-6 text-6xl text-white tracking-tighter capitalize">Book your adventure today!</h2>
                         <p className="mb-8 text-xl text-gray-200 tracking-tight">Customize your experience with our tailored itineraries and enjoy the expertise of our professional guides.</p>
-                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded-lg focus:ring-4 focus:ring-gray-200 transition duration-200">
+                        <div className="inline-block px-5 py-4 text-gray-700 font-semibold tracking-tight bg-white hover:bg-gray-100 rounded focus:ring-4 focus:ring-gray-200 transition duration-200">
                             <Link href={'/contact'}>
                                 {page.acf.section_7.title}
                             </Link>

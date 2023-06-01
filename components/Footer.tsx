@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-sm text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-4">
-                &copy; Designed by <span className="lowercase">7plus8_</span>
+                &copy; Designed by <span className="lowercase"><em>7plus8_</em></span>
             </div>
         </footer>
     )
