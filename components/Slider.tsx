@@ -122,15 +122,14 @@ const Slider = (props: any) => {
     return (
         <div ref={sliders} className="w-full h-full relative overflow-hidden">
             {
-                Array.from(slides).map((slide: any, i: any) => {
-                    return (
-                        <Slide
-                            source={slide.image}
-                            author={slide.author}
-                            key={i}
-                        />
-                    )
-                })
+                Array.from(slides).map((slide: any, i: any) => (
+                    <Slide
+                        source={slide.image}
+                        author={slide.author}
+                        key={i}
+                    />
+                )
+                )
             }
         </div>
     )

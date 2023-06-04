@@ -8,4 +8,14 @@ async function getPage(id: any) {
     return res.json()
 }
 
-export { getPage }
+async function getExperience(id: any) {
+    let res = await fetch(`https://api.starlynthrillingadventures.com/wp-json/wp/v2/experience/${id}?_fields=acf&acf_format=standard`)
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch data');
+    }
+
+    return res.json()
+}
+
+export { getPage, getExperience }
