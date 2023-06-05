@@ -29,3 +29,7 @@ body {
 .navbar {
   background-color: rgba(27, 118, 50, 1);
 }
+
+.cs-text-green {
+  color: rgba(27, 118, 50, 1);
+}

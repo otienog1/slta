@@ -1,9 +1,10 @@
 import Footer from '@/components/Footer'
 import './globals.css'
-// import { Inter } from 'next/font/google'
+//
+import { Source_Sans_Pro } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 
-// const inter = Inter({ subsets: ['latin'] })
+const poppins = Source_Sans_Pro({ weight: '400' })
 
 export const metadata = {
     title: 'Starlyn Thrilling Adventures',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body suppressHydrationWarning={true}>
+            <body suppressHydrationWarning={true} className={poppins.className}>
                 <>
                     <Navbar />
                     <>

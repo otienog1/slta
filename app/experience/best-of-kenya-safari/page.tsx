@@ -2,7 +2,7 @@ import Image from "next/image"
 import { getExperience } from "@/components/page"
 
 const Experience = async () => {
-    const experience = await getExperience(168)
+    const experience = await getExperience(165)
     return (
         <>
             <div className="relative w-full h-[calc(100vh/2)]">
