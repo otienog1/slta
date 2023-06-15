@@ -71,7 +71,9 @@ const HomePage = async () => {
                         <h2 className="font-heading mb-5 text-6xl tracking-tighter">
                             {page.acf.section_3.our_tours.title}
                         </h2>
-                        <p className="text-xl tracking-tight">Use and re-use tons of responsive sections to create the perfect layout. Sections are organised into convenient categories.</p>
+                        <p className="text-xl tracking-tight">
+                            Our signature itineraries combine recommended safari experiences with preferred destinations throughout East Africa, offering immersive adventures that showcase diverse landscapes, abundant wildlife, and remarkable cultural encounters.
+                        </p>
                     </div>
                     <div className="flex flex-wrap px-4">
                         {page.acf.section_3.tours.map((tour: any, i: any) => (
