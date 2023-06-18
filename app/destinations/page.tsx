@@ -1,4 +1,3 @@
-'use client'
 import { getPage } from "@/components/page"
 import Image from "next/image"
 
