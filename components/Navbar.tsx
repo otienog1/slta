@@ -36,19 +36,19 @@ const Navbar = () => {
 
                 <div className={`${open ? 'block' : "hidden"} w-full md:block md:w-auto`}>
                     <div className="font-medium flex flex-col uppercase tracking-widest p-4 md:p-0 mt-4 text-sm md:flex-row md:space-x-8 md:mt-0">
-                        <Link href={'/'}>
+                        <Link href={'/'} onClick={() => setOpen(!open)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Home</span>
                         </Link>
-                        <Link href={'/destinations'}>
+                        <Link href={'/destinations'} onClick={() => setOpen(!open)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Destinations</span>
                         </Link>
-                        <Link href={'/experience'}>
+                        <Link href={'/experience'} onClick={() => setOpen(!open)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Experience</span>
                         </Link>
-                        <Link href={'/about'}>
+                        <Link href={'/about'} onClick={() => setOpen(!open)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">About</span>
                         </Link>
-                        <Link href={'/contact'}>
+                        <Link href={'/contact'} onClick={() => setOpen(!open)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Contact</span>
                         </Link>
                     </div>
