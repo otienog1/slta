@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 const ContactForm = (props: any) => {
     let { handler, isLoading, isSent, hasError, message } = props
@@ -14,57 +14,21 @@ const ContactForm = (props: any) => {
         })
     }
 
+    const initFormState = useCallback(() => {
+        setFormState({
+            ...formState,
+            ['your-subject']: "Contact Form",
+        })
+    }, [formState])
+
     const handleFormSubmit = (e: any) => {
         e.preventDefault();
         handler(e, formState)
     }
 
     useEffect(() => {
-        setFormState({
-            ...formState,
-            ['your-subject']: "Contact Form",
-        })
+        initFormState()
     }, [])
-
-
-    // const [name, setName] = useState(''),
-    //     [email, setEmail] = useState(''),
-    //     [message, setMessage] = useState(''),
-    //     url = 'https://api.starlynthrillingadventures.com/wp-json/contact-form-7/v1/contact-forms/213/feedback/',
-
-    //     JSONtoFormData = (json: any) => {
-    //         try {
-    //             const data = new FormData()
-    //             for (let k in json) {
-    //                 data.append(k, json[k])
-    //             }
-    //             return data
-    //         } catch (error) {
-    //             console.error(error)
-    //             return null
-    //         }
-    //     }
-
-    // let param = {
-    //     'your-name': name,
-    //     'your-email': email,
-    //     'your-subject': 'Website Contact Form',
-    //     'your-message': message,
-    // }
-
-    // const submitMessage = async (e: any) => {
-    //     e.preventDefault();
-
-    //     const response = await fetch(url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data',
-    //         },
-    //         body: JSONtoFormData(param)
-    //     })
-    //     const data = response.json()
-    //     console.log(data)
-    // }
 
 
     return (
