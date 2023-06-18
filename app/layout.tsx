@@ -1,10 +1,10 @@
 import Footer from '@/components/Footer'
 import './globals.css'
 //
-import { Source_Sans_Pro } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 
-const poppins = Source_Sans_Pro({
+const poppins = Source_Sans_3({
     weight: '400',
     subsets: ['latin'],
     display: 'swap'

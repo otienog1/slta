@@ -23,7 +23,11 @@ const Experiences = async () => {
                                 </div>
                             </Link>
                             <p className="text-indigo-500 font-semibold tracking-tight">{experience.acf.destination}</p>
-                            <h3 className="text-xl group-hover:text-gray-900 font-semibold group-hover:underline">{experience.acf.title}</h3>
+                            <h3 className="text-xl group-hover:text-gray-900 font-semibold group-hover:underline">
+                                <Link href={`/experience/${experience.acf.slug}`} >
+                                    {experience.acf.title}
+                                </Link>
+                            </h3>
                             <span className="text-sm text-gray-600 tracking-tight">{experience.acf.days}</span>
                         </div>
                     </div>
