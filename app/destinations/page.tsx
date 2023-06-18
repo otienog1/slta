@@ -12,7 +12,7 @@ const Destinations = async () => {
             </div>
             <div className="container mx-auto flex gap-4 flex-wrap justify-center pb-12 px-6 mb-12">
                 {Array.from(page.acf.destinations).map(({ destination }: any, i: any) => (
-                    <div className="relative w-1/5 h-72 overflow-hidden" key={i}>
+                    <div className="relative w-full md:w-1/3 h-72 overflow-hidden" key={i}>
                         <Image
                             src={destination.image}
                             alt="starlyn thrilling adventures"

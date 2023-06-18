@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm"
+import Cf7FormWrapper from "@/components/Cf7FormWrapper"
 
 const Contact = () => {
     return (
@@ -37,7 +38,9 @@ const Contact = () => {
                         </a> */}
                     </div>
                     <div>
-                        <ContactForm />
+                        <Cf7FormWrapper siteUrl={''} formId={213} url={'https://api.starlynthrillingadventures.com/wp-json/contact-form-7/v1/contact-forms/213/feedback/'}>
+                            <ContactForm />
+                        </Cf7FormWrapper>
                     </div>
                 </div>
             </div>

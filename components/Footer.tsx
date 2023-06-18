@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left pt-16 pb-10">
-                <div>
+                <div className="flex justify-center md:justify-start">
                     <Image
                         src={Logo}
                         width={137}

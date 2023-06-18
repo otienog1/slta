@@ -11,7 +11,7 @@ const HomePage = async () => {
 
     return (
         <main className="min-h-screen justify-center">
-            <div className="md:h-[calc(100vh-80px)] xl:h-[calc(100vh-140px)]">
+            <div className="h-screen md:h-[calc(100vh-80px)] xl:h-[calc(100vh-140px)]">
                 <Slider
                     slides={page.acf.section_1.slider}
                     autoplay={!0}
@@ -65,9 +65,9 @@ const HomePage = async () => {
                     </div>
                 </div>
             </div>
-            <div className="md:py-28">
+            <div className="py-12 md:py-28">
                 <div className="container mx-auto">
-                    <div className="max-w-2xl text-center mx-auto mb-16">
+                    <div className="max-w-2xl text-center mx-auto mb-16 px-4">
                         <h2 className="font-heading mb-5 text-6xl tracking-tighter">
                             {page.acf.section_3.our_tours.title}
                         </h2>

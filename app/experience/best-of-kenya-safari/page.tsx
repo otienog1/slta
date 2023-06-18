@@ -10,10 +10,11 @@ const Experience = async () => {
                     src={experience.acf.image}
                     alt={experience.acf.title}
                     fill
+                    style={{ objectFit: "cover" }}
                 />
             </div>
             <div className="container px-4 mx-auto pt-10">
-                <div className="w-3/5">
+                <div className="w-full lg:w-3/5">
                     <h2 className="font-bold text-3xl tracking-tighter mb-10">{experience.acf.title}</h2>
                     <div
                         className="mb-10"
