@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar flex items-center justify-center">
-            <div className="max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <Link href={'/'} className="flex items-center">
                     <Image
                         src={Logo}
@@ -36,19 +36,19 @@ const Navbar = () => {
 
                 <div className={`${open ? 'block' : "hidden"} w-full md:block md:w-auto`}>
                     <div className="font-medium flex flex-col uppercase tracking-widest p-4 md:p-0 mt-4 text-sm md:flex-row md:space-x-8 md:mt-0">
-                        <Link href={'/'} onClick={() => setOpen(!open)}>
+                        <Link href={'/'} onClick={() => setOpen(!true)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Home</span>
                         </Link>
-                        <Link href={'/destinations'} onClick={() => setOpen(!open)}>
+                        <Link href={'/destinations'} onClick={() => setOpen(!true)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Destinations</span>
                         </Link>
-                        <Link href={'/experience'} onClick={() => setOpen(!open)}>
+                        <Link href={'/experience'} onClick={() => setOpen(!true)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Experience</span>
                         </Link>
-                        <Link href={'/about'} onClick={() => setOpen(!open)}>
+                        <Link href={'/about'} onClick={() => setOpen(!true)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">About</span>
                         </Link>
-                        <Link href={'/contact'} onClick={() => setOpen(!open)}>
+                        <Link href={'/contact'} onClick={() => setOpen(!true)}>
                             <span className="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Contact</span>
                         </Link>
                     </div>
