@@ -19,7 +19,7 @@ const Navbar = () => {
                         alt="Starlyn Thrilling Adventures"
                         className="mr-3"
                     />
-                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Starlyn Thrilling Adventures</span>
+                    <span className="self-center text-sm uppercase font-semibold whitespace-nowrap text-white">Starlyn Thrilling Adventures</span>
                 </Link>
 
                 <button
