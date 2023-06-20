@@ -39,7 +39,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-sm text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-4">
-                &copy; Designed by <span className="lowercase"><em>7plus8_</em></span>
+                &copy; Designed by&nbsp;
+                <Link href={'https://www.instagram.com/7plus8_/'} target="_blank" referrerPolicy="no-referrer">
+                    <span className="lowercase"><em>7plus8_</em></span>
+                </Link>
             </div>
         </footer>
     )
