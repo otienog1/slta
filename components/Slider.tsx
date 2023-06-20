@@ -147,7 +147,7 @@ const Slide = (props: any) => {
                     fill
                     style={{ objectFit: "cover" }}
                 />
-                <div className="container relative h-full mx-auto">
+                <div className="absolute h-full w-full">
                     <Author author={author} />
                 </div>
             </div>
@@ -158,8 +158,8 @@ const Author = (props: any) => {
     const { author } = props
 
     return (
-        <div className="absolute bottom-10 right-4">
-            <p className="text-white text-sm tracking-tighter opacity-75">Image by {author}</p>
+        <div className="max-w-screen-xl w-full mx-auto px-4 flex h-full justify-end flex-col">
+            <p className="text-white text-sm tracking-tighter opacity-75 mb-12">Image by {author}</p>
         </div>
     )
 }
